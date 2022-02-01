@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="/static/style.css"/>
+        <title>HW4 Nathan Heckman</title>
+    </head>
+    <body>
+        <h1>Nathan's favorite TV shows:</h1>
+        <ol>
+            {%for i in range(0,len)%}
+                {% if shows[i] == 'The Office' %}
+                    <li style="color:green; font-weight:bold">{{shows[i]}}</li>
+                {% else %}
+                    <li>{{shows[i]}}</li>
+                {% endif %}
+                <img src="/static/{{pictures[i]}}"" width="200" height="200">
+            {%endfor%}
+        </ol>
+    </body>
+</html>
